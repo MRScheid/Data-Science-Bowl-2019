@@ -9,6 +9,18 @@ https://www.kaggle.com/c/data-science-bowl-2019/overview
 The data for this competition can be found here:
 https://www.kaggle.com/c/data-science-bowl-2019/data
 
+## File Organization and Function 
+
+- Data Science Bowl 2019.ipynb - Notebook for running the data input, processing, visualization and model creation, fitting and testing on the Data Science Bowl 2019 dataset.    
+
+## Environment and Instructions
+- In 'Data Science Bowl 2019.ipynb' point to the directory where the data is downloaded.  This should be on line 1 of the second code cell. 
+
+## Features
+- The 3 features of gameplay used were time spent in different types of gameplay, specifically:
+    - Clip
+    - Game
+    - Activity
 
 ## kNN justification and considerations
 
