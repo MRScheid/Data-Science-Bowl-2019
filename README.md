@@ -10,7 +10,15 @@ The data for this competition can be found here:
 https://www.kaggle.com/c/data-science-bowl-2019/data
 
 
-Next steps / future directions (with more time):
+## kNN justification and considerations
+
+I chose to use a kNN model here because kNN is pretty simple and intuitive as a first pass for a small number of input features (only 3).  I also knew the number of clusters that I was looking for -- there were only 4 classes of assessment performance and this is the only hyperparameter to tune for a kNN.  Since kNN is a non-parametric algorithm, it was a safe choice since it doesn't require the features I engineered to meet any assumptions. 
+
+One potential drawback of using the kNN on this dataset is the slight imbalance in the number of examples for each 'accuracy_group' in the training data.  Certain groups are overrepresented and this can cause a bias towards these groups, causing those groups that are underrepresented to be misclassified.  
+
+Another drawback of using the kNN is the sensitivity to outliers.  In the game_time data there are outliers in the '0' group, that spent a lot of time in the game, but never took assessments.  This can affect the accuracy of the classification.  
+
+## Next steps / future directions (with more time):
 - Parse the '0' accuracy group to see if there are subgroups in there that can be dropped due to lack of activity
 - Improving the features used to predict the child's assessment performance
     - Look at the # of help events the child initiated (more help events may mean higher performance)
