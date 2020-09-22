@@ -17,14 +17,14 @@ https://www.kaggle.com/c/data-science-bowl-2019/data
 - In 'Data Science Bowl 2019.ipynb' point to the directory where the data is downloaded.  This should be on line 1 of the second code cell. 
 
 ## Features
-- The 3 features of gameplay used were time spent in different types of gameplay, specifically:
-    - Clip
-    - Game
-    - Activity
+- The 3 features of gameplay used were:
+    - Total time in 'Clip' type activities for each respective world
+    - Total time in 'Game' type activities for each respective world
+    - Total time in 'Activity' type activities for each respective world
 
 ## kNN justification and considerations
 
-I chose to use a kNN model here because kNN is pretty simple and intuitive as a first pass for a small number of input features (only 3).  I also knew the number of clusters that I was looking for -- there were only 4 classes of assessment performance and this is the only hyperparameter to tune for a kNN.  Since kNN is a non-parametric algorithm, it was a safe choice since it doesn't require the features I engineered to meet any assumptions. 
+I chose to use a kNN model here because kNN is pretty simple and intuitive as a first pass for a small number of input features (only 3).  I also knew the number of clusters that I was looking for--there were only 4 classes of assessment performance and this is the only hyperparameter to tune for a kNN.  Since kNN is a non-parametric algorithm, it was a safe choice since it doesn't require the features I engineered to meet any assumptions. 
 
 One potential drawback of using the kNN on this dataset is the slight imbalance in the number of examples for each 'accuracy_group' in the training data.  Certain groups are overrepresented and this can cause a bias towards these groups, causing those groups that are underrepresented to be misclassified.  
 
